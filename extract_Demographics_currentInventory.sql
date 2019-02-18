@@ -1,8 +1,8 @@
--- Project Theta extract from tbl_Report_Data
--- Demographic purposes only 
--- snapshot, pulled from CUBS previous night (check [export_date])
+-- account_id is invoice not actual individual 
+-- possible groupings to true individual (rather than invoices): group by medical_record or account_phone 
 
-select 
+
+select
 	med_rec_num as medical_record, 
 	account_id, 
 	account_phone, 
@@ -19,7 +19,7 @@ select
 	status_code,
 	previous_status_code,
 	Emp1_Name as employer,
-	employed = (case when Emp1_Name is NULL then 0 else 1 end),
+	employed = case when Emp1_Name in ('unemployed', 'not employed') then 0 when Emp1_Name <> '' THEN 1 else null end,
 	assigned_date,
 	first_stm_dt as stmt_1_date,
 	last_call,
@@ -33,9 +33,7 @@ select
 	total_balance,
 	ttl_pt_pmt,
 	cancelled_amount
-from tbl_Report_Data;
-
-
-
+from tbl_Report_Data
+where client_id like 'BH%'
 
 
