@@ -1,15 +1,11 @@
--- account_id is invoice not actual individual 
--- possible groupings to true individual (rather than invoices): group by medical_record or account_phone 
+; declare @date date = (select getdate()-1) -- date filter = yesterday
+select cast(@date as datetime) -- format to match [assigned_date] datetime type at 00:00:00 
 
-
-select
-	med_rec_num as medical_record, 
+select 
+--	med_rec_num as medical_record, 
 	account_id, 
 	account_phone, 
-	packet_id as invoice_group,
-	patient_number as provider_patientID,
 	client_id,
-	logon as [login],
 	datediff(year, pt_dob,getdate()) as patient_age_exported,
 	getdate() as export_date,
 	account_zip, 
@@ -32,8 +28,9 @@ select
 	assn_bal as initialload_balance,
 	total_balance,
 	ttl_pt_pmt,
-	cancelled_amount
-from tbl_Report_Data
-where client_id like 'BH%'
-
-
+	cancelled_amount 
+from tbl_Report_Data 
+where 
+	client_id like 'BH%' and 
+	assigned_date = @date
+;
