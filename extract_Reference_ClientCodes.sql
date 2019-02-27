@@ -4,7 +4,19 @@
 -- built from tbl_ClientID, tbl__ClientCodeDescription
 
 select 
-	client_id, 
-	client_code, 
-	client_description 
-from vw_Clients;
+	client_id 
+	, client_code 
+	, client_description 
+	, project as [Dialer project] 
+from vw_Clients
+where 
+	client_id like 'BH%' and
+	client_id not in (
+		'BHRI100'
+		, 'BHEC100'
+		, 'BHHS100'
+		, 'BHST100'
+		,'BHAK100'
+		, 'BHLR100'
+		, 'BHNL100'
+	)
