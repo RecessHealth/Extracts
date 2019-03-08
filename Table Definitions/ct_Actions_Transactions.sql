@@ -1,10 +1,21 @@
-create table Actions_allTime-Transactions.csv (
-	transaction_id varchar(20),
-	account_id varchar(8),
-	transaction_amount float(17,2),
-	client_id varchar(10),
-	transaction_status varchar(3),
-	[login] varchar(10),
-	transaction_date datetime
-	reporting_period varchar(8)
-)
+--------------------------------------------------------
+-- #BarnTransHistory: grab all historical transactions
+--------------------------------------------------------
+select
+	unique_trans_id as transaction_id, 
+	account_number as account_id, 
+    transaction_amount, 
+	client_number as client_id,
+	transaction_code as transaction_status, 
+	[login], 
+	transaction_date,
+	transaction_period as reporting_period
+into #BarnTranshistory 
+from vw_MonthEndTrans_With_CUArchive
+where client_number like 'BH%'
+
+------------------------------------------------------
+-- export output 
+-----------------------------------------------------
+select * from #BarnTranshistory;
+
