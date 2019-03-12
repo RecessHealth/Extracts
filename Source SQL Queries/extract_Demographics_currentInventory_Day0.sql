@@ -39,6 +39,7 @@ where logon = 'SEC';
 )
 select 
 	account_id
+-- catch ',' in field because will break csv intermediary file 
 	, account_phone 
 	, client_id
 	, datediff(year, pt_dob,getdate()) as patient_age
@@ -54,8 +55,8 @@ select
 	, coalesce(nullif(nullif(serv_type,'NULL'),''),'UNKNOWN') as [med_service]
  	, status_code 
  	, previous_status_code
-	, (case when Emp1_Name in ('NULL', 'UNKNOWN') then 0 else 1 end) as employer_known
-	, (case when Emp1_Name in ('unemployed', 'not employed') then 0 when nullif(Emp1_Name,'') <> '' THEN 1 else null end) as is_employed
+	, (case when Emp1_Name in ('NULL', 'UNKNOWN') then 0 when Emp1_Name is null then 0 else 1 end) as employer_known
+	, (case when Emp1_Name in ('unemployed', 'not employed') then 0 when Emp1_Name is null then 0 when nullif(Emp1_Name,'') <> '' THEN 1 else null end) as is_employed
 	, assigned_date 
 	, datepart(year, assigned_date) as assigned_year
 	, datepart(month, assigned_date) as assigned_month

@@ -1,0 +1,1 @@
+Import-Csv -Path C:\Users\jadrummond\Documents\deliverables\recess\extract\Barnabas\BigSquid\Demographics_format.csv | Format-Table -AutoSize > C:\Users\jadrummond\Documents\deliverables\recess\extract\Barnabas\BigSquid\Demographics_format.fmt

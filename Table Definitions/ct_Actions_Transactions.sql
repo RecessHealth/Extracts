@@ -1,21 +1,11 @@
---------------------------------------------------------
--- #BarnTransHistory: grab all historical transactions
---------------------------------------------------------
-select
-	unique_trans_id as transaction_id, 
-	account_number as account_id, 
-    transaction_amount, 
-	client_number as client_id,
-	transaction_code as transaction_status, 
-	[login], 
-	transaction_date,
-	transaction_period as reporting_period
-into #BarnTranshistory 
-from vw_MonthEndTrans_With_CUArchive
-where client_number like 'BH%'
-
-------------------------------------------------------
--- export output 
------------------------------------------------------
-select * from #BarnTranshistory;
-
+create table Transactions (
+	account_id varchar(50)
+	, trans_in_30 int
+	, trans_in_60 int
+	, trans_in_90 int
+	, trans_in_120 int
+	, paid_in_30 decimal(13,2)
+	, paid_in_60 decimal(13,2)
+	, paid_in_90 decimal(13,2)
+	, paid_in_120 decimal(13,2)
+) 

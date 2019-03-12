@@ -10,29 +10,29 @@ create table Demographics (
 	, med_service varchar(50)
 	, status_code varchar(50)
 	, previous_status_code varchar(50)
-	, employer_known varchar(1)
-	, is_employed varchar(1)
-	, assigned_date datetime
-	, assigend_year varchar(50)
+	, employer_known varchar(4)
+	, is_employed varchar(4)
+	, assigned_date date
+	, assigned_year varchar(50)
 	, assigned_month varchar(50)
 	, assigned_week varchar(50)
 	, initial_balance int
 	, cancelled_amount int
 	, calls_by_acctID int
 	, calls_by_telephone int
-	, status_change_date datetime
+	, status_change_date date
 	, inventory_age int
 	, days_since_discharge int
-	, insured varchar(1)
-	, governemnt_ins varchar(1) 
-	, Day_30 datetime
-	, Day_31 datetime 
-	, Day_60 datetime
-	, Day_61 datetime
-	, Day_90 datetime
-	, Day_91 datetime
-	, Day_120 datetime
-	, Day_121 datetime
+	, insured varchar(4)
+	, government_ins varchar(4) 
+	, Day_30 date
+	, Day_31 date 
+	, Day_60 date
+	, Day_61 date
+	, Day_90 date
+	, Day_91 date
+	, Day_120 date
+	, Day_121 date
 	, ATB_bucket varchar(50)
-	, PPA varchar(1)
+	, PPA varchar(4)
 )
