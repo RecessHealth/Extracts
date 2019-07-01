@@ -1,0 +1,2 @@
+REM UTC date guarantees consistent date if this process runs after 6/7pm CST/CDT 
+bcp "select account_id, client_id, campaign, qualdate from tbl_dialerqualificationhistory where client_id like 'BH%' and qualdate=convert(datetime,datediff(day,1,getutcdate()),102)" queryout %1/Quals_%2.txt -S pfs-sql1 -d PFS -U readonly -P today05 -c 

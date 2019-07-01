@@ -1,0 +1,14 @@
+12.0
+11
+1	SQLCHAR	0	50	"\t"	1	filename	SQL_Latin1_General_CP1_CI_AS
+2	SQLCHAR	0	50	"\t"	2	account_id	SQL_Latin1_General_CP1_CI_AS
+3	SQLCHAR	0	50	"\t"	3	telephone	SQL_Latin1_General_CP1_CI_AS
+4	SQLCHAR	0	50	"\t"	4	client_id	SQL_Latin1_General_CP1_CI_AS
+5	SQLCHAR	0	50	"\t"	5	agent_id	SQL_Latin1_General_CP1_CI_AS
+6	SQLCHAR	0	50	"\t"	6	campaign_id	SQL_Latin1_General_CP1_CI_AS
+7	SQLCHAR	0	50	"\t"	7	termcode	SQL_Latin1_General_CP1_CI_AS
+8	SQLCHAR	0	50	"\t"	8	lastcalldate	SQL_Latin1_General_CP1_CI_AS
+9	SQLCHAR	0	50	"\t"	9	outbound	SQL_Latin1_General_CP1_CI_AS
+10	SQLCHAR	0	50	"\t"	10	pickup	SQL_Latin1_General_CP1_CI_AS
+11	SQLCHAR	0	50	"\r\n"	11	phonepay	SQL_Latin1_General_CP1_CI_AS
+

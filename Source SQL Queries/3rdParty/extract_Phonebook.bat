@@ -1,0 +1,1 @@
+bcp "select account_id, account_phone from tbl_Report_Data where client_id like 'BH%%';" queryout %1\Phonebook_%2.txt -S "pfs-sql1" -d "PFS" -U readonly -P today05 -c

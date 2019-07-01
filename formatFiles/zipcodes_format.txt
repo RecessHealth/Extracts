@@ -1,0 +1,17 @@
+14.0							
+15							
+1	SQLCHAR	0	50	","	1	zip_code	SQL_Latin1_General_CP1_CI_AS
+2	SQLCHAR	0	50	","	2	latitude	SQL_Latin1_General_CP1_CI_AS
+3	SQLCHAR	0	50	","	3	longitude	SQL_Latin1_General_CP1_CI_AS
+4	SQLCHAR	0	50	","	4	city_name	SQL_Latin1_General_CP1_CI_AS
+5	SQLCHAR	0	50	","	5	state_id	SQL_Latin1_General_CP1_CI_AS
+6	SQLCHAR	0	50	","	6	state_name	SQL_Latin1_General_CP1_CI_AS
+7	SQLCHAR	0	50	","	7	zcta	SQL_Latin1_General_CP1_CI_AS
+8	SQLCHAR	0	50	","	8	population	SQL_Latin1_General_CP1_CI_AS
+9	SQLCHAR	0	50	","	9	density	SQL_Latin1_General_CP1_CI_AS
+10	SQLCHAR	0	50	","	10	county_fips	SQL_Latin1_General_CP1_CI_AS
+11	SQLCHAR	0	50	","	11	county_name	SQL_Latin1_General_CP1_CI_AS
+12	SQLCHAR	0	0	""	0	all_county_weights	""
+13	SQLCHAR	0	0	""	0	imprecise	""
+14	SQLCHAR	0	0	""	0	military	""
+15	SQLCHAR	0	100	"\r\n"	12	timezone	SQL_Latin1_General_CP1_CI_AS

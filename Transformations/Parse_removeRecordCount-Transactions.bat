@@ -1,0 +1,1 @@
+FINDSTR /R /I /V "^$ (\d+)\s row(s) affected)" C:\Users\jadrummond\Documents\deliverables\recess\extract\Barnabas\BigSquid\Transactions.csv>>C:\Users\jadrummond\Documents\deliverables\recess\extract\Barnabas\BigSquid\Transactions.csv
